@@ -1,5 +1,3 @@
-![Portfolio Preview](https://github.com/kartikpjpt/3D-interactive-portfolio/blob/main/public/assets/seo/og-image.png?raw=true)
-
 # 🚀 Kartik Prajapat - Portfolio Website
 
 Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills as a Senior Software Engineer with 4+ years of experience in building scalable, enterprise-grade systems.
