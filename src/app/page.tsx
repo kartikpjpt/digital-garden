@@ -8,6 +8,7 @@ import SkillsSection from "@/components/sections/skills";
 import ProjectsSection from "@/components/sections/projects";
 import ContactSection from "@/components/sections/contact";
 import HeroSection from "@/components/sections/hero";
+import AboutSection from "@/components/sections/about";
 
 function MainPage() {
   return (
@@ -18,6 +19,7 @@ function MainPage() {
             <AnimatedBackground />
           </div>
           <HeroSection />
+          <AboutSection />
           <SkillsSection />
           {/* <ProjectsSection /> */}
           {/* <ContactSection /> */}
