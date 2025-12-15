@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Figtree } from "next/font/google";
 import { FaBriefcase, FaGraduationCap, FaJava } from "react-icons/fa6";
 import {
   SiTypescript,
@@ -19,9 +20,14 @@ import {
 } from "react-icons/si";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ScrollRevealText from "../ui/scroll-reveal-text";
+import { ScrollReveal, ScrollRevealText } from "../ui/scroll-reveal";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 interface ExperienceItem {
   title: string;
@@ -168,7 +174,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="relative w-full min-h-screen py-20">
+    <section id="about" className={`relative w-full min-h-screen py-20 ${figtree.className}`}>
       <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
         {/* Header */}
         <div className="mb-20">
@@ -176,19 +182,12 @@ const AboutSection = () => {
             text="ABOUT ME"
             as="h2"
             className="text-4xl text-center md:text-7xl font-bold text-zinc-900 dark:text-white"
-            gradient={false}
-            staggerDelay={0.05}
+            wordDelay={0.1}
           />
         </div>
 
         {/* Summary */}
-        <motion.div
-          className="max-w-4xl mx-auto mb-16"
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <ScrollReveal className="max-w-4xl mx-auto mb-16" delay={0.3}>
           <div
             className="p-8 md:p-10 border-[.5px] rounded-2xl border-zinc-300 dark:border-zinc-600 bg-white/80 dark:bg-black/20"
             style={{ backdropFilter: "blur(10px)" }}
@@ -214,7 +213,7 @@ const AboutSection = () => {
               </span>, with a focus on optimizing complex data pipelines and automating decision workflows. Passionate about solving offline-world problems through innovative technology.
             </p>
           </div>
-        </motion.div>
+        </ScrollReveal>
 
         {/* Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
@@ -235,8 +234,7 @@ const AboutSection = () => {
                   text="Experience"
                   as="h3"
                   className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white"
-                  gradient={false}
-                  staggerDelay={0.08}
+                  wordDelay={0.08}
                 />
               </div>
               <motion.div
@@ -303,8 +301,7 @@ const AboutSection = () => {
                     text="Education"
                     as="h3"
                     className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white"
-                    gradient={false}
-                    staggerDelay={0.08}
+                    wordDelay={0.08}
                   />
                 </div>
                 {EDUCATION.map((edu, index) => (
@@ -348,8 +345,7 @@ const AboutSection = () => {
                   text="Technical Skills"
                   as="h3"
                   className="text-2xl md:text-3xl mb-6 font-bold text-zinc-900 dark:text-white"
-                  gradient={false}
-                  staggerDelay={0.08}
+                  wordDelay={0.08}
                 />
                 <motion.div
                   className="space-y-4"
