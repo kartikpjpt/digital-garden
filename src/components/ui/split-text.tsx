@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
 
 interface SplitTextProps {
   children: string;
@@ -20,10 +19,10 @@ export const SplitText = ({
 
   const container = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: {
       opacity: 1,
       transition: { staggerChildren: 0.03, delayChildren: delay },
-    }),
+    },
   };
 
   const child = {

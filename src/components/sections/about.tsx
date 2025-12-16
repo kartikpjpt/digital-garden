@@ -21,6 +21,8 @@ import {
 import { ScrollReveal } from "../ui/scroll-reveal";
 import { MagicCard } from "../ui/magic-card";
 import { SplitText } from "../ui/split-text";
+import { TextType } from "../ui/text-type";
+import { ShinyText } from "../ui/shiny-text";
 
 const archivoBlack = Archivo_Black({
   subsets: ["latin"],
@@ -164,13 +166,19 @@ const AboutSection = () => {
               <MagicCard>
                 <div className="p-6 md:p-8">
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
-                    Hey there! I&apos;m a <span className="font-bold text-white">Product-obsessed Full Stack Engineer</span> with 4+ years of experience building scalable, enterprise-grade systems and high-performance user interfaces.
+                    <TextType delay={0.2} speed={10}>
+                      Hey there! I&apos;m a Product-obsessed Full Stack Engineer with 4+ years of experience building scalable, enterprise-grade systems and high-performance user interfaces.
+                    </TextType>
                   </p>
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
-                    I thrive on taking ownership from concept to deployment in both startup and fintech environments. My expertise spans across <span className="font-bold text-white">React, TypeScript, Node.js, and Java</span>, with a particular focus on optimizing complex data pipelines and automating decision workflows.
+                    <TextType delay={2} speed={10}>
+                      I thrive on taking ownership from concept to deployment in both startup and fintech environments. My expertise spans across React, TypeScript, Node.js, and Java, with a particular focus on optimizing complex data pipelines and automating decision workflows.
+                    </TextType>
                   </p>
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl text-justify">
-                    I&apos;m passionate about solving real-world problems through innovative technology and building products that make a genuine impact. When I&apos;m not coding, you&apos;ll find me exploring new technologies and contributing to open-source projects.
+                    <TextType delay={4} speed={10}>
+                      I&apos;m passionate about solving real-world problems through innovative technology and building products that make a genuine impact. When I&apos;m not coding, you&apos;ll find me exploring new technologies and contributing to open-source projects.
+                    </TextType>
                   </p>
                 </div>
               </MagicCard>
@@ -193,30 +201,33 @@ const AboutSection = () => {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={0.3}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Object.entries(SKILLS).map(([category, skills], catIndex) => (
-                <MagicCard key={category}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(SKILLS).map(([category, skills], catIndex) => (
+              <motion.div
+                key={category}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{
+                  delay: catIndex * 0.15,
+                  duration: 0.5,
+                  ease: "easeOut"
+                }}
+              >
+                <MagicCard>
                   <motion.div
                     className="p-6"
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: catIndex * 0.1 }}
                     whileHover={{ y: -5 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                       {category}
                     </h3>
                     <div className="space-y-3">
                       {skills.map((skill, i) => (
-                        <motion.div
+                        <div
                           key={i}
-                          className="flex items-center gap-3 p-3 bg-zinc-800/80 border border-zinc-700/50 rounded-lg hover:border-zinc-600 hover:bg-zinc-800 transition-all"
-                          initial={{ x: -20, opacity: 0 }}
-                          whileInView={{ x: 0, opacity: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.05 * i }}
+                          className="flex items-center gap-3 p-3 bg-zinc-800/80 border border-zinc-700/50 rounded-lg hover:border-zinc-600 hover:bg-zinc-800 transition-all duration-200"
                         >
                           <div
                             className="p-2 rounded-lg flex items-center justify-center"
@@ -229,14 +240,14 @@ const AboutSection = () => {
                           <span className="text-base text-zinc-100 font-medium">
                             {skill.name}
                           </span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                   </motion.div>
                 </MagicCard>
-              ))}
-            </div>
-          </ScrollReveal>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -300,7 +311,11 @@ const AboutSection = () => {
                         {exp.highlights.map((highlight, i) => (
                           <li key={i} className="flex gap-2">
                             <span className="text-zinc-500 mt-1">▹</span>
-                            <span className="leading-relaxed">{highlight}</span>
+                            <span className="leading-relaxed">
+                              <ShinyText>
+                                {highlight}
+                              </ShinyText>
+                            </span>
                           </li>
                         ))}
                       </ul>
