@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[archivoBlack.className].join(" ")}>
+    <html lang="en" className={`dark ${archivoBlack.className}`}>
       <head>
         <Script
           defer
@@ -68,6 +68,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
+          forcedTheme="dark"
           disableTransitionOnChange
         >
           <Particles

@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Figtree } from "next/font/google";
+import { Archivo_Black, Figtree } from "next/font/google";
 import { FaBriefcase, FaGraduationCap, FaJava } from "react-icons/fa6";
 import {
   SiTypescript,
@@ -18,11 +18,14 @@ import {
   SiDocker,
   SiGithubactions,
 } from "react-icons/si";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollReveal, ScrollRevealText } from "../ui/scroll-reveal";
+import { ScrollReveal } from "../ui/scroll-reveal";
+import { MagicCard } from "../ui/magic-card";
+import { SplitText } from "../ui/split-text";
 
-gsap.registerPlugin(ScrollTrigger);
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -125,32 +128,6 @@ const SKILLS = {
 };
 
 const AboutSection = () => {
-  const highlightRefs = useRef<(HTMLSpanElement | null)[]>([]);
-
-  useEffect(() => {
-    // Animate highlight keywords
-    highlightRefs.current.forEach((ref) => {
-      if (ref) {
-        gsap.fromTo(
-          ref,
-          {
-            opacity: 0.5,
-            color: "#a1a1aa",
-          },
-          {
-            opacity: 1,
-            color: "#ffffff",
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: ref,
-              start: "top 90%",
-            },
-          }
-        );
-      }
-    });
-  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -174,248 +151,233 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className={`relative w-full min-h-screen py-20 ${figtree.className}`}>
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
-        {/* Header */}
-        <div className="mb-20">
-          <ScrollRevealText
-            text="ABOUT ME"
-            as="h2"
-            className="text-4xl text-center md:text-7xl font-bold text-zinc-900 dark:text-white"
-            wordDelay={0.1}
-          />
-        </div>
-
-        {/* Summary */}
-        <ScrollReveal className="max-w-4xl mx-auto mb-16" delay={0.3}>
-          <div
-            className="p-8 md:p-10 border-[.5px] rounded-2xl border-zinc-300 dark:border-zinc-600 bg-white/80 dark:bg-black/20"
-            style={{ backdropFilter: "blur(10px)" }}
-          >
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg mb-4">
-              Product-obsessed <span
-                ref={(el) => {
-                  highlightRefs.current[0] = el;
-                }}
-                className="font-bold"
-              >
-                Full Stack Engineer
-              </span> with 4+ years of experience building scalable, enterprise-grade systems and high-performance user interfaces. Proven track record of taking ownership from concept to deployment in both startup and fintech environments.
-            </p>
-            <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
-              Expertise in <span
-                ref={(el) => {
-                  highlightRefs.current[1] = el;
-                }}
-                className="font-bold"
-              >
-                React, TypeScript, Node.js, and Java
-              </span>, with a focus on optimizing complex data pipelines and automating decision workflows. Passionate about solving offline-world problems through innovative technology.
-            </p>
+    <>
+      {/* About Me Section */}
+      <section id="about" className={`relative w-full min-h-screen py-20 ${figtree.className}`}>
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          {/* Header */}
+          <div className="mb-16">
+            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+              <SplitText>ABOUT ME</SplitText>
+            </h2>
+            <ScrollReveal delay={0.2}>
+              <MagicCard>
+                <div className="p-6 md:p-8">
+                  <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
+                    Hey there! I&apos;m a <span className="font-bold text-white">Product-obsessed Full Stack Engineer</span> with 4+ years of experience building scalable, enterprise-grade systems and high-performance user interfaces.
+                  </p>
+                  <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
+                    I thrive on taking ownership from concept to deployment in both startup and fintech environments. My expertise spans across <span className="font-bold text-white">React, TypeScript, Node.js, and Java</span>, with a particular focus on optimizing complex data pipelines and automating decision workflows.
+                  </p>
+                  <p className="text-zinc-300 leading-relaxed text-lg md:text-xl text-justify">
+                    I&apos;m passionate about solving real-world problems through innovative technology and building products that make a genuine impact. When I&apos;m not coding, you&apos;ll find me exploring new technologies and contributing to open-source projects.
+                  </p>
+                </div>
+              </MagicCard>
+            </ScrollReveal>
           </div>
-        </ScrollReveal>
+        </div>
+      </section>
 
-        {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
-          {/* Experience Column */}
+      {/* Skills Section */}
+      <section id="skills" className={`relative w-full py-20 ${figtree.className}`}>
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="mb-16">
+            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+              <SplitText>MY SKILLS</SplitText>
+            </h2>
+            <ScrollReveal delay={0.2}>
+              <p className="text-zinc-400 text-lg md:text-xl max-w-3xl text-center mx-auto">
+                The secret sauce behind building modern, scalable applications
+              </p>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(SKILLS).map(([category, skills], catIndex) => (
+                <MagicCard key={category}>
+                  <motion.div
+                    className="p-6"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: catIndex * 0.1 }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
+                      {category}
+                    </h3>
+                    <div className="space-y-3">
+                      {skills.map((skill, i) => (
+                        <motion.div
+                          key={i}
+                          className="flex items-center gap-3 p-3 bg-zinc-800/80 border border-zinc-700/50 rounded-lg hover:border-zinc-600 hover:bg-zinc-800 transition-all"
+                          initial={{ x: -20, opacity: 0 }}
+                          whileInView={{ x: 0, opacity: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.05 * i }}
+                        >
+                          <div
+                            className="p-2 rounded-lg flex items-center justify-center"
+                            style={{ backgroundColor: skill.color + "30" }}
+                          >
+                            <div style={{ color: skill.color, fontSize: "1.5rem" }}>
+                              {skill.icon}
+                            </div>
+                          </div>
+                          <span className="text-base text-zinc-100 font-medium">
+                            {skill.name}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                </MagicCard>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Experience & Education Section */}
+      <section id="experience" className={`relative w-full py-20 ${figtree.className}`}>
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+          <div className="mb-16">
+            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+              <SplitText>EXPERIENCE</SplitText>
+            </h2>
+          </div>
+
+          {/* Experience Section */}
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            className="mb-12"
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div
-              className="p-6 md:p-8 border-[.5px] rounded-2xl border-zinc-300 dark:border-zinc-600 bg-white/80 dark:bg-black/20 h-full"
-              style={{ backdropFilter: "blur(10px)" }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <FaBriefcase className="text-2xl text-zinc-600 dark:text-zinc-400" />
-                <ScrollRevealText
-                  text="Experience"
-                  as="h3"
-                  className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white"
-                  wordDelay={0.08}
-                />
-              </div>
-              <motion.div
-                className="space-y-6"
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {EXPERIENCE.map((exp, index) => (
-                  <motion.div
-                    key={index}
-                    className="relative pl-6 pb-6 border-l-2 border-zinc-700 last:border-l-0 last:pb-0"
-                    variants={itemVariants}
-                  >
+            <MagicCard>
+              <div className="p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <FaBriefcase className="text-2xl text-zinc-400" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    Experience
+                  </h3>
+                </div>
+                <motion.div
+                  className="space-y-6"
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  {EXPERIENCE.map((exp, index) => (
                     <motion.div
-                      className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-600 border-2 border-zinc-800"
-                      whileHover={{ scale: 1.5, backgroundColor: "#a1a1aa" }}
-                    />
-                    <div className="mb-2">
-                      <h4 className="text-base md:text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-                        {exp.title}
-                      </h4>
-                      <div className="flex flex-col text-sm text-zinc-600 dark:text-zinc-400">
-                        <span className="font-medium">{exp.company}</span>
-                        <span className="text-xs text-zinc-500 dark:text-zinc-500">{exp.period}</span>
-                        {exp.stack && (
-                          <span className="text-xs text-zinc-500 dark:text-zinc-500 mt-1">
-                            {exp.stack}
-                          </span>
-                        )}
+                      key={index}
+                      className="relative pl-6 pb-6 border-l-2 border-zinc-700 last:border-l-0 last:pb-0"
+                      variants={itemVariants}
+                    >
+                      <motion.div
+                        className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-zinc-600 border-2 border-zinc-800"
+                        whileHover={{ scale: 1.5, backgroundColor: "#a1a1aa" }}
+                      />
+                      <div className="mb-2">
+                        <h4 className="text-base md:text-lg font-semibold text-zinc-200">
+                          {exp.title}
+                        </h4>
+                        <div className="flex flex-col text-sm text-zinc-400">
+                          <span className="font-medium">{exp.company}</span>
+                          <span className="text-xs text-zinc-500">{exp.period}</span>
+                          {exp.stack && (
+                            <span className="text-xs text-zinc-500 mt-1">
+                              {exp.stack}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {exp.highlights.map((highlight, i) => (
-                        <li key={i} className="flex gap-2">
-                          <span className="text-zinc-400 dark:text-zinc-500 mt-1">▹</span>
-                          <span className="leading-relaxed">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
+                      <ul className="space-y-1 text-sm text-zinc-300">
+                        {exp.highlights.map((highlight, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-zinc-500 mt-1">▹</span>
+                            <span className="leading-relaxed">{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+            </MagicCard>
           </motion.div>
 
-          {/* Right Column - Education & Skills */}
-          <div className="space-y-8">
-            {/* Education */}
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div
-                className="p-6 md:p-8 border-[.5px] rounded-2xl border-zinc-300 dark:border-zinc-600 bg-white/80 dark:bg-black/20"
-                style={{ backdropFilter: "blur(10px)" }}
-              >
+          {/* Education Section */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <MagicCard>
+              <div className="p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <FaGraduationCap className="text-2xl text-zinc-600 dark:text-zinc-400" />
-                  <ScrollRevealText
-                    text="Education"
-                    as="h3"
-                    className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white"
-                    wordDelay={0.08}
-                  />
+                  <FaGraduationCap className="text-2xl text-zinc-400" />
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">
+                    Education
+                  </h3>
                 </div>
                 {EDUCATION.map((edu, index) => (
                   <motion.div
                     key={index}
-                    className="p-4 bg-zinc-100 dark:bg-zinc-800/50 rounded-lg border border-zinc-300 dark:border-zinc-700"
+                    className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700"
                     whileHover={{ scale: 1.02 }}
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    <h4 className="text-base md:text-lg font-semibold text-zinc-800 dark:text-zinc-200 mb-1">
+                    <h4 className="text-base md:text-lg font-semibold text-zinc-200 mb-1">
                       {edu.degree}
                     </h4>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400">{edu.institution}</p>
-                    <div className="flex flex-col text-xs text-zinc-500 dark:text-zinc-500 mt-2">
+                    <p className="text-sm text-zinc-400">{edu.institution}</p>
+                    <div className="flex flex-col text-xs text-zinc-500 mt-2">
                       <span>{edu.location}</span>
                       <span>{edu.period}</span>
-                      <span className="text-zinc-600 dark:text-zinc-400 font-medium mt-1">
+                      <span className="text-zinc-400 font-medium mt-1">
                         {edu.grade}
                       </span>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </MagicCard>
+          </motion.div>
 
-            {/* Skills */}
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div
-                className="p-6 md:p-8 border-[.5px] rounded-2xl border-zinc-300 dark:border-zinc-600 bg-white/80 dark:bg-black/20"
-                style={{ backdropFilter: "blur(10px)" }}
-              >
-                <ScrollRevealText
-                  text="Technical Skills"
-                  as="h3"
-                  className="text-2xl md:text-3xl mb-6 font-bold text-zinc-900 dark:text-white"
-                  wordDelay={0.08}
-                />
-                <motion.div
-                  className="space-y-4"
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                >
-                  {Object.entries(SKILLS).map(([category, skills]) => (
-                    <motion.div key={category} variants={itemVariants}>
-                      <h4 className="text-base font-semibold text-zinc-700 dark:text-zinc-300 mb-3">
-                        {category}
-                      </h4>
-                      <div className="flex flex-wrap gap-3">
-                        {skills.map((skill, i) => (
-                          <motion.div
-                            key={i}
-                            className="flex items-center gap-2 px-3 py-2 bg-zinc-100 dark:bg-zinc-800/50 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-700/50 transition-all"
-                            initial={{ scale: 0, opacity: 0 }}
-                            whileInView={{ scale: 1, opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.05 * i }}
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            <div
-                              className="p-1.5 rounded-md flex items-center justify-center"
-                              style={{ backgroundColor: skill.color + "20" }}
-                            >
-                              <div style={{ color: skill.color, fontSize: "1.25rem" }}>
-                                {skill.icon}
-                              </div>
-                            </div>
-                            <span className="text-sm text-zinc-700 dark:text-zinc-300 font-medium">
-                              {skill.name}
-                            </span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  ))}
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* View Full Resume Link */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-        >
-          <a
-            href="https://drive.google.com/file/d/1gOv_y6AZOSYU3pPonf9UMeUewVtlOyEA/view"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* View Full Resume Link */}
+          <motion.div
+            className="text-center mt-12"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
           >
-            <motion.button
-              className="px-8 py-3 bg-zinc-200 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-full text-zinc-900 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-500 hover:bg-zinc-300 dark:hover:bg-zinc-700 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
+              href="https://drive.google.com/file/d/1gOv_y6AZOSYU3pPonf9UMeUewVtlOyEA/view"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              View Full Resume →
-            </motion.button>
-          </a>
-        </motion.div>
-      </div>
-    </section>
+              <motion.button
+                className="px-8 py-3 bg-zinc-800 border border-zinc-700 rounded-full text-zinc-300 hover:border-zinc-500 hover:bg-zinc-700 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Full Resume →
+              </motion.button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 
