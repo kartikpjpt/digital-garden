@@ -2,7 +2,13 @@ import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
-import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
+import {
+  ArrowDownUpIcon,
+  ArrowUpRight,
+  ExternalLink,
+  Link2,
+  MoveUpRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -242,103 +248,151 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI" />,
   },
   netlify: {
     title: "Netlify",
     bg: "black",
     fg: "white",
-    icon: <SiNetlify/>,
+    icon: <SiNetlify />,
   },
   html: {
     title: "HTML5",
     bg: "black",
     fg: "white",
-    icon: <SiHtml5/>,
+    icon: <SiHtml5 />,
   },
   css: {
     title: "CSS3",
     bg: "black",
     fg: "white",
-    icon: <SiCss3/>,
+    icon: <SiCss3 />,
   },
   bootstrap: {
     title: "Bootstrap",
     bg: "black",
     fg: "white",
-    icon: <SiBootstrap/>,
+    icon: <SiBootstrap />,
   },
   maven: {
     title: "Maven",
     bg: "black",
     fg: "white",
-    icon: <SiApachemaven/>,
+    icon: <SiApachemaven />,
   },
   java: {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <img src="assets/icons/icons8-java.svg" alt="Java" />,
   },
   cplusplus: {
     title: "C++",
     bg: "black",
     fg: "white",
-    icon: <SiCplusplus/>,
+    icon: <SiCplusplus />,
   },
   arduino: {
     title: "Arduino",
     bg: "black",
     fg: "white",
-    icon: <SiArduino/>,
+    icon: <SiArduino />,
   },
   redux: {
     title: "Redux",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+        alt="Redux"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   nestjs: {
     title: "NestJS",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="NestJS" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg"
+        alt="NestJS"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   springboot: {
     title: "Spring Boot",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+        alt="Spring Boot"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   materialui: {
     title: "Material UI",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="Material UI" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+        alt="Material UI"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   strapi: {
     title: "Strapi CMS",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/strapi/strapi-original.svg" alt="Strapi" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/strapi/strapi-original.svg"
+        alt="Strapi"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   aws: {
     title: "AWS",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg"
+        alt="AWS"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   ethers: {
     title: "Ethers.js",
     bg: "black",
     fg: "white",
-    icon: <img src="https://docs.ethers.org/v5/static/logo.svg" alt="Ethers.js" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://docs.ethers.org/v5/static/logo.svg"
+        alt="Ethers.js"
+        style={{ width: "50px" }}
+      />
+    ),
   },
   stripe: {
     title: "Stripe",
     bg: "black",
     fg: "white",
-    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg" alt="Stripe" style={{width: "50px"}} />,
+    icon: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/stripe/stripe-original.svg"
+        alt="Stripe"
+        style={{ width: "50px" }}
+      />
+    ),
   },
 };
 export type Project = {
@@ -361,7 +415,12 @@ const projects: Project[] = [
     screenshots: ["1.png"],
     live: "https://saison-omni.com",
     skills: {
-      frontend: [PROJECT_SKILLS.ts, PROJECT_SKILLS.react, PROJECT_SKILLS.redux, PROJECT_SKILLS.shadcn],
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.redux,
+        PROJECT_SKILLS.shadcn,
+      ],
       backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express],
     },
     get content() {
@@ -371,17 +430,23 @@ const projects: Project[] = [
             Config-Driven Form Engine
           </TypographyP>
           <TypographyP className="font-mono ">
-            Engineered a production-ready form engine in React capable of dynamically generating
-            forms from JSON configurations. Published as an internal npm package and adopted across
-            multiple teams at Saison Omni.
+            Engineered a production-ready form engine in React capable of
+            dynamically generating forms from JSON configurations. Published as
+            an internal npm package and adopted across multiple teams at Saison
+            Omni.
           </TypographyP>
           <ProjectsLinks live={this.live} />
           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
           <p className="font-mono mb-2">
-            • Registry-driven architecture supporting nested groups, arrays, and conditional visibility<br/>
-            • Schema-based validation using AJV for type safety<br/>
-            • Virtualized rendering and debounced validation handling 500+ fields without performance degradation<br/>
-            • Backend-driven UI creation empowering non-frontend teams to ship independently
+            • Registry-driven architecture supporting nested groups, arrays, and
+            conditional visibility
+            <br />
+            • Schema-based validation using AJV for type safety
+            <br />
+            • Virtualized rendering and debounced validation handling 500+
+            fields without performance degradation
+            <br />• Backend-driven UI creation empowering non-frontend teams to
+            ship independently
           </p>
         </div>
       );
@@ -395,7 +460,12 @@ const projects: Project[] = [
     screenshots: ["1.png"],
     live: "https://saison-international.com",
     skills: {
-      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.react, PROJECT_SKILLS.framerMotion, PROJECT_SKILLS.tailwind],
+      frontend: [
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.framerMotion,
+        PROJECT_SKILLS.tailwind,
+      ],
       backend: [PROJECT_SKILLS.strapi, PROJECT_SKILLS.node],
     },
     get content() {
@@ -406,16 +476,21 @@ const projects: Project[] = [
           </TypographyP>
           <TypographyP className="font-mono ">
             Led end-to-end development of saison-international.com, /impact, and
-            /saison-investment-management. Integrated Strapi CMS to support multilingual content
-            and delivered animated, performant UIs using React, Next.js, and Framer Motion.
+            /saison-investment-management. Integrated Strapi CMS to support
+            multilingual content and delivered animated, performant UIs using
+            React, Next.js, and Framer Motion.
           </TypographyP>
           <ProjectsLinks live={this.live} />
-          <TypographyH3 className="my-4 mt-8">Performance Achievements</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Performance Achievements
+          </TypographyH3>
           <p className="font-mono mb-2">
-            • LCP (Largest Contentful Paint) under 2.5 seconds<br/>
-            • Lighthouse SEO score of 80+<br/>
-            • SSR implementation for improved perceived performance<br/>
-            • Multilingual support via Strapi CMS
+            • LCP (Largest Contentful Paint) under 2.5 seconds
+            <br />
+            • Lighthouse SEO score of 80+
+            <br />
+            • SSR implementation for improved perceived performance
+            <br />• Multilingual support via Strapi CMS
           </p>
         </div>
       );
@@ -429,8 +504,16 @@ const projects: Project[] = [
     screenshots: ["1.png"],
     live: "https://saison-omni.com",
     skills: {
-      frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind],
-      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express, PROJECT_SKILLS.postgres],
+      frontend: [
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.postgres,
+      ],
     },
     get content() {
       return (
@@ -439,17 +522,20 @@ const projects: Project[] = [
             Loan Disbursement SDK
           </TypographyP>
           <TypographyP className="font-mono ">
-            Engineered a high-performance SDK enabling loan approvals in under 3 minutes.
-            Built with Next.js utilizing server-side rendering for optimal performance.
-            Adopted by major platforms including Flipkart, myGate, and Bajaj, serving 1Cr+ daily users.
+            Engineered a high-performance SDK enabling loan approvals in under 3
+            minutes. Built with Next.js utilizing server-side rendering for
+            optimal performance. Adopted by major platforms including Flipkart,
+            myGate, and Bajaj.
           </TypographyP>
           <ProjectsLinks live={this.live} />
           <TypographyH3 className="my-4 mt-8">Impact & Scale</TypographyH3>
           <p className="font-mono mb-2">
-            • Serving 1 Crore+ daily users across partner platforms<br/>
-            • Loan approval time reduced to under 3 minutes<br/>
-            • Mobile-first responsive design for cross-device compatibility<br/>
-            • Adopted by Flipkart, myGate, and Bajaj Finance
+            • Serving 1 Crore+ daily users across partner platforms
+            <br />
+            • Loan approval time reduced to under 3 minutes
+            <br />
+            • Mobile-first responsive design for cross-device compatibility
+            <br />• Adopted by Flipkart, myGate, and Bajaj Finance
           </p>
         </div>
       );
@@ -463,7 +549,12 @@ const projects: Project[] = [
     screenshots: ["1.png"],
     live: "https://saison-omni.com",
     skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.shadcn],
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
       backend: [PROJECT_SKILLS.node],
     },
     get content() {
@@ -473,17 +564,22 @@ const projects: Project[] = [
             Enterprise Component Library & Monorepo
           </TypographyP>
           <TypographyP className="font-mono ">
-            Spearheaded development of a core component library to unify design across projects
-            and reduce delivery timelines. Built 60+ reusable UI components using the compound
-            pattern in React, focusing on scalability.
+            Spearheaded development of a core component library to unify design
+            across projects and reduce delivery timelines. Built 60+ reusable UI
+            components using the compound pattern in React, focusing on
+            scalability.
           </TypographyP>
           <ProjectsLinks live={this.live} />
           <TypographyH3 className="my-4 mt-8">Architecture</TypographyH3>
           <p className="font-mono mb-2">
-            • Architected monorepo + microfrontend system serving 4 projects with shared UI<br/>
-            • 60+ reusable React components with pluggable features (reports, settings)<br/>
-            • Compound component pattern for flexibility<br/>
-            • Published as internal npm packages for team consumption
+            • Architected monorepo + microfrontend system serving 4 projects
+            with shared UI
+            <br />
+            • 60+ reusable React components with pluggable features (reports,
+            settings)
+            <br />
+            • Compound component pattern for flexibility
+            <br />• Published as internal npm packages for team consumption
           </p>
         </div>
       );
@@ -497,8 +593,16 @@ const projects: Project[] = [
     screenshots: ["1.png"],
     live: "https://saison-omni.com",
     skills: {
-      frontend: [PROJECT_SKILLS.react, PROJECT_SKILLS.ts, PROJECT_SKILLS.materialui],
-      backend: [PROJECT_SKILLS.node, PROJECT_SKILLS.express, PROJECT_SKILLS.postgres],
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.materialui,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.postgres,
+      ],
     },
     get content() {
       return (
@@ -507,17 +611,20 @@ const projects: Project[] = [
             Document Management System Revamp
           </TypographyP>
           <TypographyP className="font-mono ">
-            Revamped the document management system with smart tagging and instant previews,
-            reducing information retrieval time by 60%. Enhanced UX with real-time search
-            and advanced filtering capabilities.
+            Revamped the document management system with smart tagging and
+            instant previews, reducing information retrieval time by 60%.
+            Enhanced UX with real-time search and advanced filtering
+            capabilities.
           </TypographyP>
           <ProjectsLinks live={this.live} />
           <TypographyH3 className="my-4 mt-8">Key Improvements</TypographyH3>
           <p className="font-mono mb-2">
-            • Information retrieval time reduced by 60%<br/>
-            • Smart tagging system for better organization<br/>
-            • Instant document previews<br/>
-            • Real-time search with advanced filters
+            • Information retrieval time reduced by 60%
+            <br />
+            • Smart tagging system for better organization
+            <br />
+            • Instant document previews
+            <br />• Real-time search with advanced filters
           </p>
         </div>
       );
@@ -533,7 +640,13 @@ const projects: Project[] = [
     github: "https://github.com/kartikpjpt",
     skills: {
       frontend: [PROJECT_SKILLS.next, PROJECT_SKILLS.react, PROJECT_SKILLS.ts],
-      backend: [PROJECT_SKILLS.nestjs, PROJECT_SKILLS.node, PROJECT_SKILLS.ethers, PROJECT_SKILLS.stripe, PROJECT_SKILLS.mongo],
+      backend: [
+        PROJECT_SKILLS.nestjs,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.ethers,
+        PROJECT_SKILLS.stripe,
+        PROJECT_SKILLS.mongo,
+      ],
     },
     get content() {
       return (
@@ -542,18 +655,24 @@ const projects: Project[] = [
             Web3 SaaS Platforms (BlokMiners)
           </TypographyP>
           <TypographyP className="font-mono ">
-            Led zero-to-one development of multiple SaaS-based Web3 platforms including
-            unicus.one, blocktickets.io, buk.app, and gamepay.sg. Handled architecture
-            from concept to deployment across all products.
+            Led zero-to-one development of multiple SaaS-based Web3 platforms
+            including unicus.one, blocktickets.io, buk.app, and gamepay.sg.
+            Handled architecture from concept to deployment across all products.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Technical Highlights</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Technical Highlights
+          </TypographyH3>
           <p className="font-mono mb-2">
-            • Engineered hybrid payment gateways integrating MetaMask, Circle, Stripe, and TripleA<br/>
-            • Seamless crypto-to-fiat transactions and NFT minting workflows<br/>
-            • Built high-performance frontends and NestJS backends<br/>
-            • Real-time blockchain state management using Ethers.js<br/>
-            • Wallet authentication for global user base
+            • Engineered hybrid payment gateways integrating MetaMask, Circle,
+            Stripe, and TripleA
+            <br />
+            • Seamless crypto-to-fiat transactions and NFT minting workflows
+            <br />
+            • Built high-performance frontends and NestJS backends
+            <br />
+            • Real-time blockchain state management using Ethers.js
+            <br />• Wallet authentication for global user base
           </p>
         </div>
       );
@@ -1024,26 +1143,34 @@ const projects: Project[] = [
   // },
 
   // +
-  { // 01. AI Docker file optimizer project
+  {
+    // 01. AI Docker file optimizer project
     id: "aidockerfileoptimizer",
     category: "AI and DevOps",
     title: "AI Dockerfile Optimizer",
     src: "/assets/projects-screenshots/aidockerfileoptimizer/2.png",
     screenshots: ["1.png", "2.png", "3.png"],
     live: "https://ai-docker-file-optimizer.netlify.app/",
-    github:"https://github.com/Abhiz2411/AI-Docker-file-optimizer",
+    github: "https://github.com/Abhiz2411/AI-Docker-file-optimizer",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
-      backend: [PROJECT_SKILLS.openai,PROJECT_SKILLS.netlify],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [PROJECT_SKILLS.openai, PROJECT_SKILLS.netlify],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller, more efficient images. 
-            Simply paste your Dockerfile, and the app analyzes it for best practices and size 
-            optimization tips. It then provides a refactored, optimized version of the Dockerfile. 
-            Deployed on Vercel, it ensures fast and easy access to Dockerfile optimization.
+            AI-Docker-file-optimizer helps optimize Dockerfiles for smaller,
+            more efficient images. Simply paste your Dockerfile, and the app
+            analyzes it for best practices and size optimization tips. It then
+            provides a refactored, optimized version of the Dockerfile. Deployed
+            on Vercel, it ensures fast and easy access to Dockerfile
+            optimization.
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -1057,7 +1184,8 @@ const projects: Project[] = [
       );
     },
   },
-  { // 02. FinanceMe project
+  {
+    // 02. FinanceMe project
     id: "financeme",
     category: "DevOps in Banking and Finance",
     title: "FinanceMe: Complete DevOps Capstone Project",
@@ -1085,19 +1213,19 @@ const projects: Project[] = [
             FinanceMe: Complete DevOps Capstone Project
           </TypographyP>
           <TypographyP className="font-mono ">
-            This project demonstrates the deployment of a DevOps pipeline for a global banking and
-            financial services provider, FinanceMe. The company transitioned from a monolithic 
-            architecture to a microservice-based architecture to handle increased traffic and 
-            scaling challenges. The project involves automating infrastructure provisioning, build 
-            and deployment processes, and continuous monitoring using modern DevOps tools and 
-            AWS services.?
+            This project demonstrates the deployment of a DevOps pipeline for a
+            global banking and financial services provider, FinanceMe. The
+            company transitioned from a monolithic architecture to a
+            microservice-based architecture to handle increased traffic and
+            scaling challenges. The project involves automating infrastructure
+            provisioning, build and deployment processes, and continuous
+            monitoring using modern DevOps tools and AWS services.?
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Architecture </TypographyH3>
           <p className="font-mono mb-2">
-            The project is divided into three main phases:
-            1.Automating Infrastructure Provisioning
-            2.Build and Deployment Automation
+            The project is divided into three main phases: 1.Automating
+            Infrastructure Provisioning 2.Build and Deployment Automation
             3.Continuous Monitoring
           </p>
           <SlideShow
@@ -1106,13 +1234,15 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/2.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Automating Infrastructure Provisioning</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Automating Infrastructure Provisioning
+          </TypographyH3>
           <p className="font-mono mb-2">
-          Terraform is used to create 4 AWS EC2 instances:
-            Jenkins Master Node (for CI/CD pipeline management)
-            Build Server (for application and Docker image builds)
-            Production Server (for deploying Dockerized applications)
-            Monitoring Server (for continuous monitoring of Build and Prod servers)
+            Terraform is used to create 4 AWS EC2 instances: Jenkins Master Node
+            (for CI/CD pipeline management) Build Server (for application and
+            Docker image builds) Production Server (for deploying Dockerized
+            applications) Monitoring Server (for continuous monitoring of Build
+            and Prod servers)
           </p>
           <SlideShow
             images={[
@@ -1120,13 +1250,17 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/4.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Build and Deployment Automation</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Build and Deployment Automation
+          </TypographyH3>
 
           <p className="font-mono mb-2">
-          Jenkins is configured for a CI/CD pipeline:
-            Jenkins Master Node is responsible for pipeline orchestration.
-            Build Server is configured as a Jenkins Slave Node to handle application builds and Docker image creation.
-            Ansible is used for automating deployment to the Prod server, where the application is deployed using an Ansible client-server model.
+            Jenkins is configured for a CI/CD pipeline: Jenkins Master Node is
+            responsible for pipeline orchestration. Build Server is configured
+            as a Jenkins Slave Node to handle application builds and Docker
+            image creation. Ansible is used for automating deployment to the
+            Prod server, where the application is deployed using an Ansible
+            client-server model.
           </p>
           <SlideShow
             images={[
@@ -1135,30 +1269,37 @@ const projects: Project[] = [
               `${BASE_PATH}/financeme/7.png`,
             ]}
           />
-          <TypographyH3 className="my-4 mt-8">Continuous Monitoring </TypographyH3>
+          <TypographyH3 className="my-4 mt-8">
+            Continuous Monitoring{" "}
+          </TypographyH3>
           <p className="font-mono mb-2">
-          Prometheus and Grafana are used for real-time monitoring:
-            Node Exporter is installed on both Build and Prod servers to collect server metrics (CPU, Disk Space, Memory Utilization).
-            Grafana Dashboard is created to visualize these metrics for continuous monitoring.
+            Prometheus and Grafana are used for real-time monitoring: Node
+            Exporter is installed on both Build and Prod servers to collect
+            server metrics (CPU, Disk Space, Memory Utilization). Grafana
+            Dashboard is created to visualize these metrics for continuous
+            monitoring.
           </p>
-          <SlideShow images={[
-                `${BASE_PATH}/financeme/3.png`,
-                `${BASE_PATH}/financeme/8.png`,
-                `${BASE_PATH}/financeme/9.png`,
-                `${BASE_PATH}/financeme/10.png`,
-            ]} />
+          <SlideShow
+            images={[
+              `${BASE_PATH}/financeme/3.png`,
+              `${BASE_PATH}/financeme/8.png`,
+              `${BASE_PATH}/financeme/9.png`,
+              `${BASE_PATH}/financeme/10.png`,
+            ]}
+          />
         </div>
       );
     },
   },
-  { // 03. Portfolio project
+  {
+    // 03. Portfolio project
     id: "portfolio",
     category: "Portfolio",
     title: "My Portfolio",
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
     live: "https://kartikprajapat.site/",
-    github:"https://github.com/kartikpjpt/3D-interactive-portfolio",
+    github: "https://github.com/kartikpjpt/3D-interactive-portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,
@@ -1217,14 +1358,15 @@ const projects: Project[] = [
       );
     },
   },
-  { // 04. Smart parking assitant
+  {
+    // 04. Smart parking assitant
     id: "smartparkingassitant",
     category: "IoT",
     title: "Smart Parking Assistant",
     src: "/assets/projects-screenshots/smartparkingassitant/01.jpeg",
     screenshots: ["01.jpeg", "03.png"],
     live: "https://github.com/Abhiz2411/smart-parking-assistant",
-    github:"https://github.com/Abhiz2411/smart-parking-assistant",
+    github: "https://github.com/Abhiz2411/smart-parking-assistant",
     skills: {
       frontend: [PROJECT_SKILLS.python],
       backend: [PROJECT_SKILLS.cplusplus, PROJECT_SKILLS.arduino],
@@ -1233,11 +1375,13 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono ">
-            Transform parking with the Smart Parking Assistant, an IoT marvel powered by Arduino 
-            and IR sensors to detect and recommend the best spots in real-time. Enjoy a sleek GUI 
-            that visualizes availability and an intelligent system for quick, optimal decisions. 
-            Built to adapt with customizable hardware and Python-powered software for seamless 
-            integration. Say goodbye to parking woes and hello to smarter space utilization!
+            Transform parking with the Smart Parking Assistant, an IoT marvel
+            powered by Arduino and IR sensors to detect and recommend the best
+            spots in real-time. Enjoy a sleek GUI that visualizes availability
+            and an intelligent system for quick, optimal decisions. Built to
+            adapt with customizable hardware and Python-powered software for
+            seamless integration. Say goodbye to parking woes and hello to
+            smarter space utilization!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -1251,27 +1395,43 @@ const projects: Project[] = [
       );
     },
   },
-  { // 05. Smart Job Tracker project
+  {
+    // 05. Smart Job Tracker project
     id: "smartjobtracker",
     category: "Full stack",
     title: "Smart Job Tracker",
     src: "/assets/projects-screenshots/smartjobtracker/02.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png","06.png","07.png"],
+    screenshots: [
+      "01.png",
+      "02.png",
+      "03.png",
+      "04.png",
+      "05.png",
+      "06.png",
+      "07.png",
+    ],
     live: "https://job-tracker-application-eight.vercel.app/",
-    github:"https://github.com/Abhiz2411/Job-tracker-application",
+    github: "https://github.com/Abhiz2411/Job-tracker-application",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [PROJECT_SKILLS.firebase],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Track your job applications effortlessly with a sleek, dark-themed app that lets you 
-            manage, filter, and visualize your job search. Organize your applications with a 
-            Kanban board, monitor progress through status updates, and store everything securely. 
-            Enjoy seamless access across devices with a responsive design and email reminders for 
-            interviews. A smarter, more intuitive way to stay on top of your job hunt!
+            Track your job applications effortlessly with a sleek, dark-themed
+            app that lets you manage, filter, and visualize your job search.
+            Organize your applications with a Kanban board, monitor progress
+            through status updates, and store everything securely. Enjoy
+            seamless access across devices with a responsive design and email
+            reminders for interviews. A smarter, more intuitive way to stay on
+            top of your job hunt!
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow
@@ -1289,27 +1449,35 @@ const projects: Project[] = [
       );
     },
   },
-  { // 06. Savinder Puri portfolio project
+  {
+    // 06. Savinder Puri portfolio project
     id: "savinderpurisportfolio",
     category: "Web Development",
     title: "Savinder Puri Portfolio",
     src: "/assets/projects-screenshots/savinderpuriportfolio/01.png",
-    screenshots: ["01.png", "02.png", "03.png","04.png","05.png"],
+    screenshots: ["01.png", "02.png", "03.png", "04.png", "05.png"],
     live: "https://savinder-puri.vercel.app/",
-    github:"https://github.com/Abhiz2411/savinder-puri",
+    github: "https://github.com/Abhiz2411/savinder-puri",
     skills: {
-      frontend: [PROJECT_SKILLS.js, PROJECT_SKILLS.next, PROJECT_SKILLS.tailwind, PROJECT_SKILLS.vite],
+      frontend: [
+        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
       backend: [],
     },
     get content() {
       return (
         <div>
           <TypographyP className="font-mono ">
-            Step into the digital world of Savinder Puri, the beloved DevOps guru and Spiritual 
-            Alchemist, with this responsive portfolio website. 🌐✨ Explore his inspiring journey, 
-            milestones, and life-changing services blending tech and spirituality. Built with 
-            modern tools like React and TypeScript, it’s a heartfelt tribute to a mentor who 
-            transforms lives. 💻🕊️ Crafted with ❤️ by Kartik Prajapat! 🚀
+            Step into the digital world of Savinder Puri, the beloved DevOps
+            guru and Spiritual Alchemist, with this responsive portfolio
+            website. 🌐✨ Explore his inspiring journey, milestones, and
+            life-changing services blending tech and spirituality. Built with
+            modern tools like React and TypeScript, it’s a heartfelt tribute to
+            a mentor who transforms lives. 💻🕊️ Crafted with ❤️ by Kartik
+            Prajapat! 🚀
           </TypographyP>
           <ProjectsLinks live={this.live} repo={this.github} />
           <SlideShow

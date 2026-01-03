@@ -66,7 +66,7 @@ const EXPERIENCE: ExperienceItem[] = [
       "Optimized for scale with virtualized rendering & debounced validation, handling 500+ fields without performance degradation.",
       "Enabled backend-driven UI creation, empowering non-frontend teams to ship new forms/features independently and reducing delivery time.",
       "Engineered a Loan Disbursement SDK enabling loan approvals in under 3 minutes.",
-      "Built in Next.js to utilize server-side rendering to deliver better perceived performance, adopted by Flipkart, myGate, and Bajaj, and serving 1Cr+ daily users.",
+      "Built in Next.js to utilize server-side rendering to deliver better perceived performance, adopted by Flipkart, myGate, and Bajaj.",
       "Engineered mobile-first responsive design for cross-device compatibility.",
       "Spearheaded the development of a core component library to unify design across projects & cut delivery timelines.",
       "Made use of compound pattern in React to create 60+ reusable UI components & pluggable features(reports, settings), while focusing on scalability.",
@@ -130,7 +130,6 @@ const SKILLS = {
 };
 
 const AboutSection = () => {
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -155,11 +154,16 @@ const AboutSection = () => {
   return (
     <>
       {/* About Me Section */}
-      <section id="about" className={`relative w-full min-h-screen py-20 ${figtree.className}`}>
+      <section
+        id="about"
+        className={`relative w-full min-h-screen py-20 ${figtree.className}`}
+      >
         <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
           {/* Header */}
           <div className="mb-16">
-            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+            <h2
+              className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}
+            >
               <SplitText>ABOUT ME</SplitText>
             </h2>
             <ScrollReveal delay={0.2}>
@@ -167,17 +171,28 @@ const AboutSection = () => {
                 <div className="p-6 md:p-8">
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
                     <TextType delay={0.2} speed={10}>
-                      Hey there! I&apos;m a Product-obsessed Full Stack Engineer with 4+ years of experience building scalable, enterprise-grade systems and high-performance user interfaces.
+                      Hey there! I&apos;m a Product-obsessed Full Stack Engineer
+                      with 4+ years of experience building scalable,
+                      enterprise-grade systems and high-performance user
+                      interfaces.
                     </TextType>
                   </p>
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl mb-6 text-justify">
                     <TextType delay={2} speed={10}>
-                      I thrive on taking ownership from concept to deployment in both startup and fintech environments. My expertise spans across React, TypeScript, Node.js, and Java, with a particular focus on optimizing complex data pipelines and automating decision workflows.
+                      I thrive on taking ownership from concept to deployment in
+                      both startup and fintech environments. My expertise spans
+                      across React, TypeScript, Node.js, and Java, with a
+                      particular focus on optimizing complex data pipelines and
+                      automating decision workflows.
                     </TextType>
                   </p>
                   <p className="text-zinc-300 leading-relaxed text-lg md:text-xl text-justify">
                     <TextType delay={4} speed={10}>
-                      I&apos;m passionate about solving real-world problems through innovative technology and building products that make a genuine impact. When I&apos;m not coding, you&apos;ll find me exploring new technologies and contributing to open-source projects.
+                      I&apos;m passionate about solving real-world problems
+                      through innovative technology and building products that
+                      make a genuine impact. When I&apos;m not coding,
+                      you&apos;ll find me exploring new technologies and
+                      contributing to open-source projects.
                     </TextType>
                   </p>
                 </div>
@@ -188,10 +203,15 @@ const AboutSection = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className={`relative w-full py-20 ${figtree.className}`}>
+      <section
+        id="skills"
+        className={`relative w-full py-20 ${figtree.className}`}
+      >
         <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="mb-16">
-            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+            <h2
+              className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}
+            >
               <SplitText>MY SKILLS</SplitText>
             </h2>
             <ScrollReveal delay={0.2}>
@@ -211,7 +231,7 @@ const AboutSection = () => {
                 transition={{
                   delay: catIndex * 0.15,
                   duration: 0.5,
-                  ease: "easeOut"
+                  ease: "easeOut",
                 }}
               >
                 <MagicCard>
@@ -233,7 +253,9 @@ const AboutSection = () => {
                             className="p-2 rounded-lg flex items-center justify-center"
                             style={{ backgroundColor: skill.color + "30" }}
                           >
-                            <div style={{ color: skill.color, fontSize: "1.5rem" }}>
+                            <div
+                              style={{ color: skill.color, fontSize: "1.5rem" }}
+                            >
                               {skill.icon}
                             </div>
                           </div>
@@ -252,10 +274,15 @@ const AboutSection = () => {
       </section>
 
       {/* Experience & Education Section */}
-      <section id="experience" className={`relative w-full py-20 ${figtree.className}`}>
+      <section
+        id="experience"
+        className={`relative w-full py-20 ${figtree.className}`}
+      >
         <div className="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
           <div className="mb-16">
-            <h2 className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}>
+            <h2
+              className={`bg-clip-text text-4xl text-center md:text-7xl font-bold text-transparent bg-gradient-to-b from-white/80 to-white/20 mb-8 ${archivoBlack.className}`}
+            >
               <SplitText>EXPERIENCE</SplitText>
             </h2>
           </div>
@@ -299,7 +326,9 @@ const AboutSection = () => {
                         </h4>
                         <div className="flex flex-col text-sm text-zinc-400">
                           <span className="font-medium">{exp.company}</span>
-                          <span className="text-xs text-zinc-500">{exp.period}</span>
+                          <span className="text-xs text-zinc-500">
+                            {exp.period}
+                          </span>
                           {exp.stack && (
                             <span className="text-xs text-zinc-500 mt-1">
                               {exp.stack}
@@ -312,9 +341,7 @@ const AboutSection = () => {
                           <li key={i} className="flex gap-2">
                             <span className="text-zinc-500 mt-1">▹</span>
                             <span className="leading-relaxed">
-                              <ShinyText>
-                                {highlight}
-                              </ShinyText>
+                              <ShinyText>{highlight}</ShinyText>
                             </span>
                           </li>
                         ))}
@@ -377,7 +404,7 @@ const AboutSection = () => {
             transition={{ delay: 0.4 }}
           >
             <a
-              href="https://drive.google.com/file/d/1gOv_y6AZOSYU3pPonf9UMeUewVtlOyEA/view"
+              href="https://drive.google.com/file/d/1DRp79yDlQYDzd4b0kmtxc2KKyz2Ygm4L/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

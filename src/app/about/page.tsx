@@ -93,7 +93,7 @@ const EXPERIENCE = [
     highlights: [
       "Engineered a config-driven form engine in React capable of dynamically generating forms from JSON configs",
       "Implemented registry-driven architecture with virtualized rendering & debounced validation, handling 500+ fields",
-      "Engineered a Loan Disbursement SDK enabling loan approvals in under 3 minutes, serving 1Cr+ daily users",
+      "Engineered a Loan Disbursement SDK enabling loan approvals in under 3 minutes",
       "Spearheaded development of core component library with 60+ reusable UI components",
       "Architected a monorepo + microfrontend system serving 4 projects with shared UI",
     ],

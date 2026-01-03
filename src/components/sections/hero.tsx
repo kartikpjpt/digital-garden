@@ -83,12 +83,12 @@ const HeroSection = () => {
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/1gOv_y6AZOSYU3pPonf9UMeUewVtlOyEA/view?usp=sharing"
+                    "https://drive.google.com/file/d/1DRp79yDlQYDzd4b0kmtxc2KKyz2Ygm4L/view?usp=sharing"
                   }
                   target="_blank"
                   className="flex-1"
                 >
-                  <BoxReveal delay={2} width="100%" >
+                  <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center gap-2 w-full">
                       <File size={24} />
                       <p>Resume</p>
@@ -111,18 +111,12 @@ const HeroSection = () => {
                       <p>Let&apos;s work together!</p>
                     </TooltipContent>
                   </Tooltip>
-                  <Link
-                    href={config.social.github}
-                    target="_blank"
-                  >
+                  <Link href={config.social.github} target="_blank">
                     <Button variant={"outline"}>
                       <SiGithub size={24} />
                     </Button>
                   </Link>
-                  <Link
-                    href={config.social.linkedin}
-                    target="_blank"
-                  >
+                  <Link href={config.social.linkedin} target="_blank">
                     <Button variant={"outline"}>
                       <SiLinkedin size={24} />
                     </Button>
